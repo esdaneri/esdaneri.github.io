@@ -1,0 +1,321 @@
+
+*{
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.contenedor
+{
+position: relative;
+width: 100%;
+max-width: 1000px;
+min-height: 1000px;
+background: #fff;
+margin: 50px;
+display: grid;
+grid-template-columns: 1fr 2fr;
+box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+.contenedor .lado_izquierdo
+{
+    position: relative;
+    background: #022c0483;
+    padding: 40px;
+}
+
+.perfil
+{
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 20px;
+border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+.perfil .img
+{
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.perfil .img img
+{
+position: absolute;
+top:0;
+left: 0;
+width: 100%;
+object-fit: cover;
+}
+
+.perfil h2
+{color: #fff;
+font-size: 1.5em;
+margin-top: 20px;
+text-transform: uppercase;
+text-align: center;
+font-weight: 600;
+line-height: 1.4em;
+}
+
+.perfil h2 span
+{
+font-size: 0.8em;
+font-weight: 300;
+}
+
+.contacto
+{
+padding-top: 40px;
+}
+
+.titulo
+{
+color: #fff;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+
+.contacto ul
+{
+position:relative;
+}
+
+.contacto ul li
+{
+position:relative;
+list-style: none;
+margin: 10px 0;
+cursor: pointer;
+}
+
+.contacto ul li .icono
+{
+display: inline-block;
+width: 30px;
+font-size: 18px;
+color: #3c03c2;
+}
+
+.contacto ul li span
+{
+color: #fff;
+font-weight: 300;
+}
+
+.contacto.educacion li
+{
+    margin-bottom: 15px;
+}
+
+.contacto.educacion h5
+{color: #3c03c2;
+font-weight: 500;
+}
+
+.contacto.educacion h4
+{
+color: #fff;
+}
+.contacto.contacto.educacion h4
+{
+color: #fff;
+font-weight: 300;
+}
+
+.contenedor .lado_derecho
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.sobremi
+{
+margin-bottom: 50px;
+}
+
+.sobremi:last-child
+{
+margin-bottom: 0;
+}
+.titulo2
+{
+color: #02470b;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 10px;
+}
+
+p{
+color: #333;
+}
+
+.sobremi .caja
+{
+display: flex;
+flex-direction: row;
+margin: 20px 0;
+}
+
+.sobremi .caja .año_institucion 
+{
+min-width: 300px
+}
+
+.sobremi .caja .año_institucion h5
+{
+text-transform: uppercase;
+color: #848c90;
+font-weight: 600;
+}
+
+.sobremi .caja .texto h4
+{
+text-transform: uppercase;
+color: #02470b;
+font-size: 16px;
+}
+
+.habilidades .caja
+{
+position: relative;
+width: 100%;
+display: grid;
+grid-template-columns: 150px 1fr;
+justify-content: center;
+align-items: center;
+}
+
+.habilidades .caja h4
+{
+text-transform: uppercase;
+color: #848c99;
+font-weight: 500;
+}
+
+.habilidades .caja .porcentaje
+{
+position: relative;
+width: 100%;
+height: 10px;
+background: #f0f0f0;
+
+}
+
+.habilidades .caja .porcentaje div
+{
+position: absolute;
+top: 0;
+left: 00;
+height: 100%;
+background: #09aa5f;
+}
+
+.conocimientos
+{
+margin-top: 50px;
+}
+
+.conocimientos .subtitulo
+{
+color:#848c90 ;
+}
+
+.experiencia
+{
+margin-top: 50px;
+}
+
+.form_contenedor
+{
+color: #02470b;
+letter-spacing: 1px;
+margin-bottom: 10px;
+margin-top: 50px;
+}
+
+
+input[type=text], input[type=email],select, textarea {
+    width: 100%; 
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical 
+  }
+  
+  
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .btnSend{
+      background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+@media (max-width: 1000px)
+{
+.contenedor
+{
+margin: 10px;
+grid-template-columns: repeat(1,1fr);
+}
+.form_contenedor
+{
+grid-template-columns: (2,1fr);
+}
+}
+
+@media (max-width: 600px)
+{
+.sobremi .caja
+{
+flex-direction: column;
+}
+.sobremi .caja .año_institucion 
+{
+margin-bottom: 5px;
+}
+.form_contenedor
+{
+grid-template-columns: (1,1fr);
+}
+.habilidades .caja
+{
+grid-template-columns: repeat(1,1fr);
+}
+}
